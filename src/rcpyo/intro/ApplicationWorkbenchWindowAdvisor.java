@@ -18,6 +18,9 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
     
     public void preWindowOpen() {
         IWorkbenchWindowConfigurer configurer = getWindowConfigurer();
+        /**
+         * 设置窗口的大小：800*600
+         */
         configurer.setInitialSize(new Point(700, 550));
         configurer.setShowCoolBar(false);
         configurer.setShowStatusLine(false);
