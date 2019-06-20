@@ -2,6 +2,9 @@ package rcpyo.intro;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Point;
+import org.eclipse.swt.graphics.Rectangle;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
@@ -43,4 +46,24 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
          */
         configurer.setTitle("YoYo");
     }
+
+    /**
+     * 功能：主窗口打开之后才被调用
+     * 			可以用来注册窗口监听；
+     */
+	@Override
+	public void postWindowOpen() {
+//		super.postWindowOpen();
+		/**
+		 * 设置主窗口自动居中
+		 */
+		Shell shell = getWindowConfigurer().getWindow().getShell();
+		Rectangle clientAreaSize = Display.getDefault().getClientArea();
+		Rectangle frameSize = shell.getBounds();
+		shell.setLocation((clientAreaSize.width - frameSize.width) / 2,(clientAreaSize.height - frameSize.height) / 2);
+	}
+    
+    
+    
+    
 }
