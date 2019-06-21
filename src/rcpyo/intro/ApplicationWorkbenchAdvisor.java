@@ -21,9 +21,9 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
          * Author:liuxingjun
          * Date:20190620
          * Version:V0.0.1
-         * true£º¡¾Ä¬ÈÏÖµ¡¿Ó¦ÓÃ³ÌĞòÃ¿´ÎÍË³öÊ±½«±£´æ´°¿ÚµÄ×´Ì¬£»
-         * false£º²»±£´æ´°¿ÚµÄ×´Ì¬£¬Ìá¹©³ÌĞòµÄÆô¶¯ËÙ¶È
-         * ĞŞ¸Ä¸Ã·½·¨£¬ÉèÖÃÎªfalse£»
+         * trueï¼šã€é»˜è®¤å€¼ã€‘åº”ç”¨ç¨‹åºæ¯æ¬¡é€€å‡ºæ—¶å°†ä¿å­˜çª—å£çš„çŠ¶æ€ï¼›
+         * falseï¼šä¸ä¿å­˜çª—å£çš„çŠ¶æ€ï¼Œæä¾›ç¨‹åºçš„å¯åŠ¨é€Ÿåº¦
+         * ä¿®æ”¹è¯¥æ–¹æ³•ï¼Œè®¾ç½®ä¸ºfalseï¼›
          */
         configurer.setSaveAndRestore(false);
         
@@ -31,17 +31,17 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
          * Author:liuxingjun
          * Date:20190621
          * Version:V0.0.1
-         * ÉèÖÃ´°¿ÚµÄ±êÌâÀ¸Îª»¡ÏßĞÎµÄ±êÌâÀ¸
-         * ¡¾ÎÊÌâ¡¿Ä¿Ç°»¹Ã»ÓĞ¿´µ½Ğ§¹û£¬²âÊÔ½áÊøÖ®ºóÔÙ¼ÇÂ¼
+         * è®¾ç½®çª—å£çš„æ ‡é¢˜æ ä¸ºå¼§çº¿å½¢çš„æ ‡é¢˜æ 
+         * ã€é—®é¢˜ã€‘ç›®å‰è¿˜æ²¡æœ‰çœ‹åˆ°æ•ˆæœï¼Œæµ‹è¯•ç»“æŸä¹‹åå†è®°å½•
          */
         PlatformUI.getPreferenceStore().setValue(IWorkbenchPreferenceConstants.SHOW_TRADITIONAL_STYLE_TABS, false);
         /**
-         * ÉèÖÃÃ¿´ÎÆô¶¯µÄÊ±ºòÏÔÊ¾»¶Ó­½çÃæ
-         * ¡¾Ä¬ÈÏÖµ¡¿true
+         * è®¾ç½®æ¯æ¬¡å¯åŠ¨çš„æ—¶å€™æ˜¾ç¤ºæ¬¢è¿ç•Œé¢
+         * ã€é»˜è®¤å€¼ã€‘true
          */
 //        PlatformUI.getPreferenceStore().setValue(IWorkbenchPreferenceConstants.SHOW_INTRO, true);
         /**
-         * ÉèÖÃÃ¿´ÎÆô¶¯µÄÊ±ºòÏÔÊ¾½ø¶ÈÌõ
+         * è®¾ç½®æ¯æ¬¡å¯åŠ¨çš„æ—¶å€™æ˜¾ç¤ºè¿›åº¦æ¡
          */
         PlatformUI.getPreferenceStore().setValue(IWorkbenchPreferenceConstants.SHOW_PROGRESS_ON_STARTUP, true);
         

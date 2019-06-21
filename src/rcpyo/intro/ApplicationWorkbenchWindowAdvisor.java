@@ -25,38 +25,38 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
     public void preWindowOpen() {
         IWorkbenchWindowConfigurer configurer = getWindowConfigurer();
         /**
-         * ÉèÖÃ´°¿ÚµÄ´óĞ¡£º1920*1080
+         * è®¾ç½®çª—å£çš„å¤§å°ï¼š1920*1080
          */
         configurer.setInitialSize(new Point(Constantss.MainWindowSize.MAIN_WINDOW_WIDTH_SIZE.getValue(), Constantss.MainWindowSize.MAIN_WINDOW_HEIGHT_SIZE.getValue()));
         /**
-         * ÔİÊ±²»ÏÔÊ¾¹¤¾ßÀ¸
+         * æš‚æ—¶ä¸æ˜¾ç¤ºå·¥å…·æ 
          */
         configurer.setShowCoolBar(false);
         /**
-         * ÏÔÊ¾×´Ì¬À¸
+         * æ˜¾ç¤ºçŠ¶æ€æ 
          */
         configurer.setShowStatusLine(true);
         
         /**
-         * ´°¿ÚÖ»ÏÔÊ¾¹Ø±Õ°´Å¥
+         * çª—å£åªæ˜¾ç¤ºå…³é—­æŒ‰é’®
          */
         configurer.setShellStyle(SWT.MIN | SWT.CLOSE);
         /**
-         * Ö÷´°¿Ú±êÌâ
+         * ä¸»çª—å£æ ‡é¢˜
          */
 //        configurer.setTitle("YoYo");
-        configurer.setTitle("ÎÒÊÇÒ»Ö»ÉÆÁ¼ÃÀÀöµÄĞ¡¿É°®...");
+        configurer.setTitle("äº¤äº’æ§åˆ¶å¹³å°");
     }
 
     /**
-     * ¹¦ÄÜ£ºÖ÷´°¿Ú´ò¿ªÖ®ºó²Å±»µ÷ÓÃ
-     * 			¿ÉÒÔÓÃÀ´×¢²á´°¿Ú¼àÌı£»
+     * åŠŸèƒ½ï¼šä¸»çª—å£æ‰“å¼€ä¹‹åæ‰è¢«è°ƒç”¨
+     * 			å¯ä»¥ç”¨æ¥æ³¨å†Œçª—å£ç›‘å¬ï¼›
      */
 	@Override
 	public void postWindowOpen() {
 //		super.postWindowOpen();
 		/**
-		 * ÉèÖÃÖ÷´°¿Ú×Ô¶¯¾ÓÖĞ
+		 * è®¾ç½®ä¸»çª—å£è‡ªåŠ¨å±…ä¸­
 		 */
 		Shell shell = getWindowConfigurer().getWindow().getShell();
 		Rectangle clientAreaSize = Display.getDefault().getClientArea();

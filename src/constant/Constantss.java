@@ -12,6 +12,11 @@ package constant;
 
 public class Constantss {
 
+	 public static final String  APPLICATON_ID = "application";
+	 
+	 public static final String ICON_PATH = "icons/";
+	 
+	 public static final String DATA_ICON_PATH = ICON_PATH +"eclipse16.png";
 	 
 	
 	/**
