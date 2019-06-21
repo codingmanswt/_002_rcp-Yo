@@ -22,9 +22,9 @@ public class Constantss {
 	public static enum MainWindowSize {
 
 		/*主窗口的水平分辨率*/
-		MAIN_WINDOW_WIDTH_SIZE(1920),
+		MAIN_WINDOW_WIDTH_SIZE(1024),
 		/*主窗口的垂直分辨率*/
-		MAIN_WINDOW_HEIGHT_SIZE(1080);
+		MAIN_WINDOW_HEIGHT_SIZE(768);
 
 		private Integer value;
 
