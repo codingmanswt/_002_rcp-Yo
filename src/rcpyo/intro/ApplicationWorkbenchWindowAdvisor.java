@@ -44,7 +44,8 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
         /**
          * 主窗口标题
          */
-        configurer.setTitle("YoYo");
+//        configurer.setTitle("YoYo");
+        configurer.setTitle("我是一只善良美丽的小可爱...");
     }
 
     /**
