@@ -26,7 +26,7 @@ public class Constantss {
 		/*主窗口的垂直分辨率*/
 		MAIN_WINDOW_HEIGHT_SIZE(768);
 
-		private Integer value;
+		private final Integer value;
 
 		private MainWindowSize(Integer value) {
 			this.value = value;
