@@ -30,8 +30,10 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
         configurer.setInitialSize(new Point(Constantss.MainWindowSize.MAIN_WINDOW_WIDTH_SIZE.getValue(), Constantss.MainWindowSize.MAIN_WINDOW_HEIGHT_SIZE.getValue()));
         /**
          * 暂时不显示工具栏
+         * 修改为窗口显示工具栏
          */
-        configurer.setShowCoolBar(false);
+//        configurer.setShowCoolBar(false);
+        configurer.setShowCoolBar(true);
         /**
          * 显示状态栏
          */

@@ -1,8 +1,8 @@
 package constant;
 
 /**
- * ³£Á¿Àà£º
- * Ê¹ÓÃ·½·¨£º
+ * ï¿½ï¿½ï¿½ï¿½ï¿½à£º
+ * Ê¹ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½
  * Constants
  * 
  * 
@@ -12,23 +12,27 @@ package constant;
 
 public class Constantss {
 
-	 public static final String  APPLICATON_ID = "application";
+	 public static final String  APPLICATON_ID = "rcpYo";
 	 
 	 public static final String ICON_PATH = "icons/";
 	 
 	 public static final String DATA_ICON_PATH = ICON_PATH +"eclipse16.png";
+	 public static final String TEACH_UNIT_DATA_ICON_PATH = ICON_PATH +"teachUnitData.gif";
+	 public static final String HISTORY_DATA_ICON_PATH = ICON_PATH +"historyData.gif";
+	 public static final String PUBLIC_DATA_ICON_PATH = ICON_PATH +"publicData.gif";
+	 public static final String REMOTE_DATA_SRCONFIG_ICON_PATH = ICON_PATH +"RemoteDataSRConfig.gif";
 	 
 	
 	/**
-	 * Ö÷´°¿ÚµÄ³ß´ç
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ÚµÄ³ß´ï¿½
 	 * @author liuxingjun
 	 *
 	 */
 	public static enum MainWindowSize {
 
-		/*Ö÷´°¿ÚµÄË®Æ½·Ö±æÂÊ*/
+		/*ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ë®Æ½ï¿½Ö±ï¿½ï¿½ï¿½*/
 		MAIN_WINDOW_WIDTH_SIZE(1024),
-		/*Ö÷´°¿ÚµÄ´¹Ö±·Ö±æÂÊ*/
+		/*ï¿½ï¿½ï¿½ï¿½ï¿½ÚµÄ´ï¿½Ö±ï¿½Ö±ï¿½ï¿½ï¿½*/
 		MAIN_WINDOW_HEIGHT_SIZE(768);
 
 		private final Integer value;
@@ -46,12 +50,12 @@ public class Constantss {
 		
 		
 		/**
-	     * Í¨ÓÃµÄÆôÓÃ½ûÓÃ×´Ì¬
+	     * Í¨ï¿½Ãµï¿½ï¿½ï¿½ï¿½Ã½ï¿½ï¿½ï¿½×´Ì¬
 	     * @author liuxingjun
 	     * @date 
 	     */
 	    public static enum EnableState{
-	        DISABLE(0,"½ûÓÃ"),ENABLE(1,"ÆôÓÃ");
+	        DISABLE(0,"ï¿½ï¿½ï¿½ï¿½"),ENABLE(1,"ï¿½ï¿½ï¿½ï¿½");
 	        private EnableState(Integer value,String name){
 	            this.value = value;
 	            this.name = name;
