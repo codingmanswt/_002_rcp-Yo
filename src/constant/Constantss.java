@@ -27,6 +27,7 @@ public class Constantss {
 	 public static final String SYS_TRAY_ICON_PATH = ICON_PATH +"sysTray2.gif";
 	 
 	 
+	 public static final long SYS_TRAY_TIME = 3 * 1000;
 	 public static final String APPLICATION_TITLE = "交互控制平台";
 	
 	/**

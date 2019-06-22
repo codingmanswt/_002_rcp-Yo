@@ -1,6 +1,9 @@
 
 package rcpyo.system;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.swt.SWT;
@@ -11,11 +14,13 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.ToolTip;
 import org.eclipse.swt.widgets.Tray;
 import org.eclipse.swt.widgets.TrayItem;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+
 import constant.Constantss;
 import rcpyo.actions.LogoutOffActions;
 import rcpyo.utils.CacheImage;
@@ -173,7 +178,48 @@ public class HookSysTray {
 		TrayItem trayItemLocal = new TrayItem(systemTray, SWT.NONE);
 		/*设置系统托盘的图像*/
 		trayItemLocal.setImage(CacheImage.getInstance().getImage(Constantss.APPLICATON_ID, Constantss.SYS_TRAY_ICON_PATH));
+		/*鼠标悬停托盘的提示信息*/
 		trayItemLocal.setToolTipText(Constantss.APPLICATION_TITLE);
+		/*增加气泡提示信息*/
+	/*	Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
+			@Override
+			public void run() {
+				window.getShell().getDisplay().asyncExec(new Runnable() {
+					
+					@Override
+					public void run() {
+						ToolTip toolTip = new ToolTip(window.getShell(), SWT.BALLOON | SWT.ICON_INFORMATION);
+						toolTip.setAutoHide(true);
+						toolTip.setMessage(Constantss.APPLICATION_TITLE);
+						toolTip.setText("欢迎使用交互控制平台");
+						trayItemLocal.setToolTip(toolTip);
+						toolTip.setVisible(true);
+						
+					}
+				});
+			}
+		}, 0,Constantss.SYS_TRAY_TIME);*/
+
+	// 定时显示气泡提示文本
+	Timer timer = new Timer();
+	timer.schedule(new TimerTask() {
+		public void run() {
+			window.getShell().getDisplay().syncExec(new Runnable() {
+				public void run() {
+					ToolTip tip = new ToolTip(window.getShell(),
+							SWT.BALLOON | SWT.ICON_INFORMATION);
+					tip.setAutoHide(true);
+					tip.setMessage(Constantss.APPLICATION_TITLE);
+					tip.setText("欢迎使用");
+					trayItemLocal.setToolTip(tip);
+					tip.setVisible(true);
+					System.out.println("该弹气泡了.......");
+				}
+			});
+		}
+	}, 0, 30*1000);
+		
 		return trayItemLocal;
 		
 	}
