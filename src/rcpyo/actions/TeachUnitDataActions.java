@@ -6,9 +6,9 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import constant.Constantss;
 
 
-public class TeachUnitData extends Action {
+public class TeachUnitDataActions extends Action {
 
-	public TeachUnitData() {
+	public TeachUnitDataActions() {
 		setId("rcpYo.src.rcpyo.actions.teachUnitData");
 		setText("教学单位情况@ALT+T");
 		setToolTipText("教学单位情况");

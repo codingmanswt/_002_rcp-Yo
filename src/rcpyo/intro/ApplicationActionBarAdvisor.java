@@ -2,6 +2,7 @@ package rcpyo.intro;
 
 import org.eclipse.jface.action.ICoolBarManager;
 import org.eclipse.jface.action.IMenuManager;
+import org.eclipse.jface.action.IStatusLineManager;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.action.ToolBarManager;
@@ -17,7 +18,8 @@ import rcpyo.actions.HistoryDataActions;
 import rcpyo.actions.LogoutOffActions;
 import rcpyo.actions.PublicDataActions;
 import rcpyo.actions.RemoteDataSRConfigActions;
-import rcpyo.actions.TeachUnitData;
+import rcpyo.actions.StatusBarContribution;
+import rcpyo.actions.TeachUnitDataActions;
 
 import org.eclipse.ui.IWorkbenchWindow;
 
@@ -36,10 +38,15 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 	private AboutSystemActions aboutSystemActions;
 	private DataBakActions dataBakActions;
 	private LogoutOffActions logoutOffActions;
-	private TeachUnitData teachUnitData;
+	private TeachUnitDataActions teachUnitData;
 	private HistoryDataActions historyData;
 	private RemoteDataSRConfigActions remoteDataSRConfig;
 	private PublicDataActions publicDataActions;
+	private StatusBarContribution statusBarContribution;
+	
+	
+	String message = "登录用户：admin  身份：普通用户";
+
 
 	public ApplicationActionBarAdvisor(IActionBarConfigurer configurer) {
 		super(configurer);
@@ -72,7 +79,7 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 		logoutOffActions = new LogoutOffActions();
 		register(logoutOffActions);
 		
-		teachUnitData = new TeachUnitData();
+		teachUnitData = new TeachUnitDataActions();
 		register(teachUnitData);
 		
 		historyData = new HistoryDataActions();
@@ -86,8 +93,13 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 		register(publicDataActions);
 		
 		
-		
-		
+		/**
+		 * 显示临时状态栏的信息
+		 */
+		statusBarContribution = new StatusBarContribution(message);
+		statusBarContribution.setVisible(true);
+				
+
 
 	}
 
@@ -145,6 +157,14 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 		
 		
 		
+	}
+
+	/**  
+	* @Description: 临时状态栏的信息显示
+	 */  
+	@Override
+	protected void fillStatusLine(IStatusLineManager statusLine) {
+		statusLine.add(statusBarContribution);
 	}
 	
 	

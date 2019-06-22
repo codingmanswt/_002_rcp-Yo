@@ -1,5 +1,6 @@
 package rcpyo.intro;
 
+import org.eclipse.jface.action.IStatusLineManager;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.Rectangle;
@@ -12,6 +13,7 @@ import org.eclipse.ui.application.WorkbenchWindowAdvisor;
 
 import constant.Constantss;
 import rcpyo.system.HookSysTray;
+import rcpyo.utils.CacheImage;
 
 public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 
@@ -69,6 +71,12 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 		shell.setLocation((clientAreaSize.width - frameSize.width) / 2,(clientAreaSize.height - frameSize.height) / 2);
 		/*创建系统托盘*/
 		createSystemTray();
+		
+		/**
+		 * 设置状态栏的临时信息
+		 */
+		IStatusLineManager statusLineManager = getWindowConfigurer().getActionBarConfigurer().getStatusLineManager();
+		statusLineManager.setMessage(CacheImage.getInstance().getImage(Constantss.APPLICATON_ID, Constantss.HISTORY_DATA_ICON_PATH),"Powered by CodingManLiu");
 	}
 	
 	/**
@@ -94,6 +102,8 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 		hookSysTray.windowMinimized(getWindowConfigurer().getWindow().getShell());
 		return false;
 	}
+	
+	
 
 	/**  
 	* @Description: 退出时释放资源
