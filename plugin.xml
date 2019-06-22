@@ -27,7 +27,27 @@
             application="rcpYo.application">
          <property
                name="windowImages"
-               value="icons/eclipse16.png,icons/eclipse32.png,icons/eclipse48.png,icons/eclipse64.png, icons/eclipse128.png,icons/eclipse256.png,icons/eclipse512.png">
+               value="icons/eclipse16.png,icons/eclipse32.png,icons/eclipse48.png,icons/eclipse64.png, icons/eclipse128.png,icons/eclipse256.png">
+         </property>
+         <property
+               name="appName"
+               value="YoYo">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="FF0000">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="6,260,200,16">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="1,279,453,15">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
          </property>
       </product>
    </extension>
@@ -80,6 +100,13 @@
             id="rcpyo.teachunitclass"
             name="教学单位明细">
       </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.splashHandlers">
+      <splashHandler
+            class="rcpyo.splashHandlers.InteractiveSplashHandler"
+            id="rcpyo.splashHandlers.interactive">
+      </splashHandler>
    </extension>
 
 </plugin>
