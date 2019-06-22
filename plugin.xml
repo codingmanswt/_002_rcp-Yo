@@ -57,5 +57,29 @@
          </presentation>
       </config>
    </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            class="rcpyo.ui.TeachUnitName"
+            icon="icons/teachUnitData.gif"
+            id="rcpyo.ui.teachunitname"
+            name="教学单位">
+      </view>
+      <view
+            allowMultiple="false"
+            class="rcpyo.ui.PieDiagram"
+            icon="icons/historyData.gif"
+            id="rcpyo.ui.piediagram"
+            name="经费概览">
+      </view>
+      <view
+            allowMultiple="false"
+            class="rcpyo.ui.TeachUnitClass"
+            icon="icons/teachUnitData.gif"
+            id="rcpyo.teachunitclass"
+            name="教学单位明细">
+      </view>
+   </extension>
 
 </plugin>

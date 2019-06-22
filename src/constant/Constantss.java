@@ -13,6 +13,9 @@ package constant;
 public class Constantss {
 
 	 public static final String  APPLICATON_ID = "rcpYo";
+	 public static final String  PIE_DIAGRAM_APPLICATON_ID_1 = "rcpyo.ui.piediagram";
+	 public static final String  TEACH_UNIT_CLASS_APPLICATON_ID_2 = "rcpyo.teachunitclass";
+	 public static final String  TEACH_UNIT_NAME_APPLICATON_ID_3 = "rcpyo.ui.teachunitname";
 	 
 	 public static final String ICON_PATH = "icons/";
 	 

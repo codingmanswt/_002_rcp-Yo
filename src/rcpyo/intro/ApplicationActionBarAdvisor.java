@@ -131,9 +131,9 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 //		super.fillCoolBar(coolBar);
 		/**
 		 * SWT.FLAT：将工具栏设置成平滑方式
-		 * SWT.SHADOW_ETCHED_OUT：将工具栏和菜单之间加一条分割线
+		 * SWT.SWT.SHADOW_OUT：将工具栏和菜单之间加一条分割线
 		 */
-		ToolBarManager toolBarManager = new ToolBarManager(SWT.FLAT | SWT.SHADOW_ETCHED_OUT);
+		ToolBarManager toolBarManager = new ToolBarManager(SWT.FLAT | SWT.SHADOW_OUT);
 		coolBar.add(toolBarManager);
 		
 		toolBarManager.add(teachUnitData);
