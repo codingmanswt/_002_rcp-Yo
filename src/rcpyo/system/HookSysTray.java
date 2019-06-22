@@ -18,6 +18,7 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import constant.Constantss;
 import rcpyo.actions.LogoutOffActions;
+import rcpyo.utils.CacheImage;
 
 /**  
 * @author codingManLiu
@@ -170,9 +171,9 @@ public class HookSysTray {
 			return null;
 		}
 		TrayItem trayItemLocal = new TrayItem(systemTray, SWT.NONE);
-		Image trayImage = AbstractUIPlugin.imageDescriptorFromPlugin(Constantss.APPLICATON_ID, Constantss.SYS_TRAY_ICON_PATH).createImage();
 		/*设置系统托盘的图像*/
-		trayItemLocal.setImage(trayImage);
+		trayItemLocal.setImage(CacheImage.getInstance().getImage(Constantss.APPLICATON_ID, Constantss.SYS_TRAY_ICON_PATH));
+		trayItemLocal.setToolTipText(Constantss.APPLICATION_TITLE);
 		return trayItemLocal;
 		
 	}

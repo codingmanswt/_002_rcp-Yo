@@ -26,6 +26,8 @@ public class Constantss {
 	 public static final String REMOTE_DATA_SRCONFIG_ICON_PATH = ICON_PATH +"RemoteDataSRConfig.gif";
 	 public static final String SYS_TRAY_ICON_PATH = ICON_PATH +"sysTray2.gif";
 	 
+	 
+	 public static final String APPLICATION_TITLE = "交互控制平台";
 	
 	/**
 	 * �����ڵĳߴ�
