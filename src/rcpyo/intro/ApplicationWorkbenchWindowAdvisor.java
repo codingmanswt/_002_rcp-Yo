@@ -11,10 +11,13 @@ import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchWindowAdvisor;
 
 import constant.Constantss;
+import rcpyo.system.HookSysTray;
 
 public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 
-    public ApplicationWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
+    private HookSysTray hookSysTray;
+
+	public ApplicationWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
         super(configurer);
     }
 
@@ -64,7 +67,46 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 		Rectangle clientAreaSize = Display.getDefault().getClientArea();
 		Rectangle frameSize = shell.getBounds();
 		shell.setLocation((clientAreaSize.width - frameSize.width) / 2,(clientAreaSize.height - frameSize.height) / 2);
+		/*创建系统托盘*/
+		createSystemTray();
 	}
+	
+	/**
+	* @author codingManLiu
+	* @date 2019年6月22日 下午2:55:04
+	* @version V0.0.1    
+	* @return void    
+	* @Description: 生成系统托盘类
+	*
+	 */
+	private void createSystemTray(){
+		hookSysTray = new HookSysTray();
+		hookSysTray.createSysTray(getWindowConfigurer().getWindow());
+		
+	}
+
+	/**  
+	* @Description: 防止关闭程序时关闭托盘
+	 */  
+	@Override
+	public boolean preWindowShellClose() {
+//		return super.preWindowShellClose();
+		hookSysTray.windowMinimized(getWindowConfigurer().getWindow().getShell());
+		return false;
+	}
+
+	/**  
+	* @Description: 退出时释放资源
+	 */  
+	@Override
+	public void dispose() {
+		/*释放系统托盘资源*/
+		hookSysTray.Dispose();
+	}
+
+	
+	
+	
     
     
     
