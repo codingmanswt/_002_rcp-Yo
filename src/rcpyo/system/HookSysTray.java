@@ -202,7 +202,7 @@ public class HookSysTray {
 		}, 0,Constantss.SYS_TRAY_TIME);*/
 
 	// 定时显示气泡提示文本
-	Timer timer = new Timer();
+/*	Timer timer = new Timer();
 	timer.schedule(new TimerTask() {
 		public void run() {
 			window.getShell().getDisplay().syncExec(new Runnable() {
@@ -218,7 +218,7 @@ public class HookSysTray {
 				}
 			});
 		}
-	}, 0, 30*1000);
+	}, 0, 30*1000);*/
 		
 		return trayItemLocal;
 		
