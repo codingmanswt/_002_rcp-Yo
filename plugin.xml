@@ -54,8 +54,9 @@
    <extension
          point="org.eclipse.ui.intro">
       <intro
-            id="rcpyo.intro"
-            class="org.eclipse.ui.intro.config.CustomizableIntroPart">
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            icon="icons/aboutSystem.gif"
+            id="rcpyo.intro">
       </intro>
       <introProductBinding
             introId="rcpyo.intro"
