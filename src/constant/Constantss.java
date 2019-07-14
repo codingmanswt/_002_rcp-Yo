@@ -25,6 +25,7 @@ public class Constantss {
 	 public static final String PUBLIC_DATA_ICON_PATH = ICON_PATH +"publicData.gif";
 	 public static final String REMOTE_DATA_SRCONFIG_ICON_PATH = ICON_PATH +"RemoteDataSRConfig.gif";
 	 public static final String SYS_TRAY_ICON_PATH = ICON_PATH +"sysTray2.gif";
+	 public static final String TEACH_UNIT_BG_PATH = ICON_PATH +"teachUnitNameViewBG.gif";
 	 
 	 
 	 public static final long SYS_TRAY_TIME = 3 * 1000;

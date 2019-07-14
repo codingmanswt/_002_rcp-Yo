@@ -24,12 +24,12 @@ public class TeachUnitNameContentProvider implements IStructuredContentProvider 
 	* @version 1.0  
 	* @param @param inputElement
 	* @param @return    参数
-	* @Description: TODO(这里用一句话描述这个方法的作用)
+	* @Description: 根据tableViewer的setInput方法提供的数据返回对应的元素并显示在tableViewer上。
 	 */  
 	@Override
 	public Object[] getElements(Object inputElement) {
 		if (inputElement instanceof List) {
-			return ((List)inputElement).toArray();
+			return ((List<?>)inputElement).toArray();
 		}
 		return new Object[0];
 	}

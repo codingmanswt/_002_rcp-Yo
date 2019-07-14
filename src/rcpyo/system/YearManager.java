@@ -77,8 +77,8 @@ public class YearManager {
 	* @param     参数
 	* @Description: TODO(这里用一句话描述这个方法的作用)
 	 */  
-	public YearManager() {
-		INSTANCE.setMaxMinYear();
+	private YearManager() {
+		setMaxMinYear();
 	}
 	
 	
@@ -91,6 +91,7 @@ public class YearManager {
 	* @Description: 从数据库中查询并设置年份的最大最小值
 	 */  
 	private void setMaxMinYear() {
+		/*此处使用的是假数据，本应该从数据库中将数据计算之后再赋值*/
 		setMaxYear(2019);
 		setMinYear(2010);
 	}
